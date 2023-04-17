@@ -8,11 +8,12 @@ db.produtos.updateOne(
   {
      tags: { $elemMatch: { $all: ["bovino"] } },
   },
-  { $inc: { "vendasPorDia.6": 120 } });
+  { $inc: { "vendasPorDia.6": 120 } },
+);
 
 db.produtos.find({}, 
   { 
     _id: false, 
     nome: true, 
-    vendasPorDia: true
+    vendasPorDia: true,
   });
