@@ -1,1 +1,1 @@
-//iniciando
+db.produtos.countDocuments({});
