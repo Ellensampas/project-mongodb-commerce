@@ -2,7 +2,7 @@ db.produtos.find({
   valoresNutricionais: {
     $elemMatch: {
       tipo: "calorias",
-      quantidade: 502,
+      quantidade: { $lt: 500 },
     },
   },
 }, { nome: true, _id: false });
